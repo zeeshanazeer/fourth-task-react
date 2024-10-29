@@ -40,7 +40,7 @@ function Post(Props) {
       <p>
         {Props.par}
       </p>
-      <img src={Props.img} alt="post image" className="post-photo" id="my-id" />
+        {Props.imge ?<img src={Props.imge} alt="post image" className="post-photo" id="my-id" /> : null}
 
       <div>
         <div className="comm">
@@ -59,14 +59,14 @@ function Post(Props) {
 function App() {
   return (
     <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
-      <Post img={car} par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
+      <Post imge={car} par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
       <Post par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."} />
-      <Post img={car2}/>
-      <Post img={car3}/>
-      <Post img={car4} par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
-      <Post img={car5}/>
+      <Post />
+      <Post imge={car3}/>
+      <Post imge={car4} par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
+      <Post imge={car5}/>
       <Post par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
-      <Post img={car2} par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
+      <Post imge={car2} par={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciuntarchitecto quaerat sunt illum, esse eveniet quas minima, non aperiam,praesentium impedit itaque enim fugit? Iure explicabo molestiaeasperiores exercitationem minus."}/>
     </div>
   );
 }
